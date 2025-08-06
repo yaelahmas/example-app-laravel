@@ -5,3 +5,25 @@
 ➜ composer run dev
 
 ➜ php artisan make:view home
+➜ php artisan make:view about
+➜ php artisan make:view contact
+➜ php artisan make:view gallery
+➜ php artisan make:component AppLayout
+➜ php artisan make:component AuthLayout
+➜ php artisan make:component Navbar/Index --view
+➜ php artisan make:component Navbar/Link --view
+➜ php artisan make:component Navbar/DropdownLink --view
+➜ php artisan make:component Navbar/MobileLink --view
+
+
+
+
+Route Example
+
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::view('about', 'about')->name('about');
+Route::view('contact', 'contact')->name('contact');
+Route::view('gallery', 'gallery')->name('gallery');
