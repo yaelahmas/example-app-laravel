@@ -5,7 +5,11 @@
 </x-app-layout> --}}
 
 <x-app-layout>
-    <div class="container mt-3">
-        <h1>Hello World!</h1>
+    <div class="container mt-4">
+        @if (session('success') || session('danger'))
+            <x-alert />
+        @else
+            <h1>Hello World!</h1>
+        @endif
     </div>
 </x-app-layout>

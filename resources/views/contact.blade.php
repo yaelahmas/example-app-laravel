@@ -8,7 +8,7 @@
 <x-app-layout>
     <x-slot name="title">Contact</x-slot>
 
-    <div class="container mt-3">
+    <div class="container mt-4">
         <h1>Contact Page!</h1>
     </div>
 </x-app-layout>
