@@ -32,6 +32,13 @@
                     <x-form.invalid-feedback :messages="$errors->get('password')" />
                 </div>
 
+                <div class="form-group">
+                    <x-form.label for="password_confirmation" :value="__('Confirm Password')" />
+                    <x-form.input type="password" name="password_confirmation" id="password_confirmation"
+                        placeholder="Enter confirm password" autocomplete="password_confirmation" />
+                    <x-form.invalid-feedback :messages="$errors->get('password_confirmation')" />
+                </div>
+
                 <x-button class="btn btn-primary btn-block">{{ __('Register') }}</x-button>
             </form>
         </div>

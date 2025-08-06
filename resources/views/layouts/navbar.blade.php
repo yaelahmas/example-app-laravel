@@ -33,11 +33,10 @@
                      <li class="nav-item dropdown">
                          <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarDropdown" role="button"
                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                             Muhammad Andre Syahli
+                             {{ Auth::user()->name }}
                          </a>
                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                             <a class="dropdown-item" href="">Your Profile</a>
-                             <a class="dropdown-item" href="">Settings</a>
+                             <a class="dropdown-item" href="{{ route('profile.edit') }}">Your Profile</a>
                              <div class="dropdown-divider"></div>
                              <a class="dropdown-item" href="javascript:void(0);"
                                  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
