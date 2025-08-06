@@ -1,6 +1,6 @@
 <x-card>
     <x-card.title>
-        <h5>{{ __('Delete Account') }}</h5>
+        <h2 class="h5">{{ __('Delete Account') }}</h5>
     </x-card.title>
 
     <x-card.body>

@@ -12,17 +12,16 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
              {{-- @if (!Route::is('login') && !Route::is('register')) --}}
              @auth
-
                  <ul class="navbar-nav mr-auto">
                      <x-nav-item href="{{ route('home') }}">Dashboard</x-nav-item>
-                     <x-nav-item href="{{ route('about') }}">Users</x-nav-item>
-                     <x-nav-item href="{{ route('article') }}">Articles</x-nav-item>
+                     <x-nav-item href="{{ route('users') }}" activePattern="users.*">Users</x-nav-item>
+                     <x-nav-item href="{{ route('articles') }}" activePattern="articles.*">Articles</x-nav-item>
                  </ul>
              @else
                  <ul class="navbar-nav mr-auto">
                      <x-nav-item href="{{ route('home') }}">Home</x-nav-item>
                      <x-nav-item href="{{ route('about') }}">About</x-nav-item>
-                     <x-nav-item href="{{ route('article') }}">Article</x-nav-item>
+                     <x-nav-item href="{{ route('articles') }}">Article</x-nav-item>
                      <x-nav-item href="{{ route('contact') }}">Contact</x-nav-item>
                  </ul>
              @endauth

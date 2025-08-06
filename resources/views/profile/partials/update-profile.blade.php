@@ -3,15 +3,16 @@
          @csrf
          @method('patch')
          <x-card.title>
-             <h5>{{ __('Profile Information') }}</h5>
-             <small>{{ __("Update your account's profile information and email address.") }}</small>
+             <h2 class="h5">{{ __('Profile Information') }}</h5>
+                 <small>{{ __("Update your account's profile information and email address.") }}</small>
          </x-card.title>
 
          <x-card.body>
              <div class="form-group">
                  <x-form.label for="name" :value="__('Full name')" />
                  <x-form.input type="name" name="name" id="name" :value="old('name', $user->name)"
-                     class="{{ $errors->has('name') ? 'is-invalid' : '' }}" placeholder="Enter name" autocomplete="name" />
+                     class="{{ $errors->has('name') ? 'is-invalid' : '' }}" placeholder="Enter name"
+                     autocomplete="name" />
                  <x-form.invalid-feedback :messages="$errors->get('name')" />
              </div>
 

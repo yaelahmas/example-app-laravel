@@ -3,8 +3,8 @@
         @csrf
         @method('put')
         <x-card.title>
-            <h5>{{ __('Update Password') }}</h5>
-            <small>{{ __('Ensure your account is using a long, random password to stay secure.') }}</small>
+            <h2 class="h5">{{ __('Update Password') }}</h5>
+                <small>{{ __('Ensure your account is using a long, random password to stay secure.') }}</small>
         </x-card.title>
 
         <x-card.body>
